@@ -44,14 +44,9 @@ public class InspectionTest {
 
     }
 
-    @Test
-    public void testCountItems() {
-        Inspection instance = new Inspection(vehicle, dbMgr);
-        int result = instance.countItems();
-        int expResult = 6;
-        assertEquals("Correct amount of inspections.", expResult, result);
 
-    }
+
+    
 
 
 

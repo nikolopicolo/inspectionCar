@@ -110,11 +110,12 @@ public class Controller {
 
     /**
      * Unfinished code.
-     * @param vehicle The inspected vehicle.
+     * @param regNo The registration number of the inspected vehicle.
      * @return The name of the next inspection.
      */
 
-    public String nextInspection(Vehicle vehicle) {
+    public String nextInspection(String regNo) {
+        Vehicle vehicle = new Vehicle(regNo);
         Inspection inspection = new Inspection(vehicle, dbMgr);
         return inspection.getInspection();
 

@@ -21,9 +21,16 @@ public class View {
      * Calls all system operations and prints the result to <code>System.out</code>.
      */
     public void sampleExecution() {
+
+        contr.newInspection();
         String regNoOfVehicleToInspect = "ABC123";
         int cost = contr.enterRegNo(regNoOfVehicleToInspect);
         System.out.println("The cost is:" + cost);
+
+        contr.payWithCashAndPrintReceipt(cost,100);
+        contr.nextInspection(regNoOfVehicleToInspect);
+        contr.enterResult(true, regNoOfVehicleToInspect);
+
 
     }
 }

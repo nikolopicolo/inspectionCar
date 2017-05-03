@@ -42,17 +42,26 @@ public class Inspection {
      * Unfinished code.
      * @return The number of inspections in the inspection list.
      */
-    public int countItems() {
+    private int countItems() {
         return inspections.size();
     }
 
+    /**
+     * Counts from 0 to 5 and then resets to 0 again.
+     * @return Returns the current number it is on.
+     */
+    public static int counter() {
+        int count = 0;
+        count = (count + 1) % 6;
+        return count;
+    }
 
     /**
      * Unfinished code.
      * @return Returns the name of an specific inspection.
      */
     public String getInspection() {
-        return inspections.get(0).getName();
+        return inspections.get(counter()).getName();
 
     }
 
@@ -60,7 +69,7 @@ public class Inspection {
      * Unfinished code
      */
     public void saveResult(boolean result) {
-        inspections.get(0).setResult(result);
+        inspections.get(counter()).setResult(result);
     }
 
 
