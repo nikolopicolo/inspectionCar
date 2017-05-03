@@ -58,11 +58,11 @@ public class Inspection {
 
     /**
      * Unfinished code
-     * @param result The result of an inspection
      */
     public void saveResult(boolean result) {
         inspections.get(0).setResult(result);
     }
+
 
 
 }

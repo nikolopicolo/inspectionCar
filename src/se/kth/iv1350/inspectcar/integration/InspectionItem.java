@@ -45,6 +45,13 @@ public class InspectionItem {
     }
 
     /**
+     * @return The result of the control.
+     */
+    public boolean getResult() {
+        return result;
+    }
+
+    /**
      * @return True if the specified object is considered to represent the same inspection item as
      *         this object.
      */

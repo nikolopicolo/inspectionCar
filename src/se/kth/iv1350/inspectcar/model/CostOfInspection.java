@@ -25,7 +25,7 @@ public final class CostOfInspection {
 
     public int calculateChange(int cashPaid) {
 
-        return this.amountToBePaid - cashPaid;
+        return cashPaid - this.amountToBePaid;
 
     }
 
