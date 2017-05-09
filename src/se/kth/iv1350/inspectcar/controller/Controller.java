@@ -102,11 +102,24 @@ public class Controller {
         CostOfInspection amountToBePaid = new CostOfInspection(cost);
         int change = amountToBePaid.calculateChange(cashPaid);
         Receipt receipt = new Receipt(cashRegisterMgr, printerMgr, amountToBePaid);
-        receipt.showPaymentInformationToScreen();
+
         receipt.openRegisterAndPrintReceipt();
+
         return change;
 
     }
+
+    /**
+     * This method prints the date and price of the car inspection on the screen.
+     * @param cost The cost of the inspection.
+     */
+
+    public String showPaymentOnScreen(int cost) {
+        CostOfInspection amountToBePaid = new CostOfInspection(cost);
+        Receipt receipt = new Receipt(cashRegisterMgr, printerMgr, amountToBePaid);
+        return receipt.showPaymentInformationToScreen();
+    }
+
 
     /**
      * Unfinished code.

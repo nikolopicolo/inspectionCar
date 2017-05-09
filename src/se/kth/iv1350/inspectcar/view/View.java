@@ -25,11 +25,20 @@ public class View {
         contr.newInspection();
         String regNoOfVehicleToInspect = "ABC123";
         int cost = contr.enterRegNo(regNoOfVehicleToInspect);
-        System.out.println("The cost is:" + cost);
+        System.out.println("The cost is: " + cost);
+        System.out.println(contr.showPaymentOnScreen(cost));
+        System.out.println("The payment is with 100.\n");
+        System.out.println("The change is: "+  contr.payWithCashAndPrintReceipt(cost,100));
 
-        contr.payWithCashAndPrintReceipt(cost,100);
-        contr.nextInspection(regNoOfVehicleToInspect);
+        System.out.println("Next car inspection: " + contr.nextInspection(regNoOfVehicleToInspect));
         contr.enterResult(true, regNoOfVehicleToInspect);
+        System.out.println("Next car inspection: " + contr.nextInspection(regNoOfVehicleToInspect));
+        contr.enterResult(true, regNoOfVehicleToInspect);
+        System.out.println("Next car inspection: " + contr.nextInspection(regNoOfVehicleToInspect));
+        contr.enterResult(true, regNoOfVehicleToInspect);
+        System.out.println("Next car inspection: " + contr.nextInspection(regNoOfVehicleToInspect));
+        contr.enterResult(true, regNoOfVehicleToInspect);
+
 
 
     }

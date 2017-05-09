@@ -11,7 +11,8 @@ import se.kth.iv1350.inspectcar.integration.InspectionItem;
 public class Inspection {
     private final Vehicle vehicle;
     private List<InspectionItem> inspections;
-
+    private static int count = -1;
+    private static int count2 = -1;
     /**
      * Creates a new instance, representing an inspection of the specified vehicle.
      *
@@ -51,13 +52,24 @@ public class Inspection {
      * @return Returns the current number it is on.
      */
     public static int counter() {
-        int count = 0;
-        count = (count + 1) % 6;
+
+        count = (count + 1) % 5;
         return count;
     }
 
     /**
-     * Unfinished code.
+     * Counts from 0 to 5 and then resets to 0 again.
+     * @return Returns the current number it is on.
+     */
+    public static int counter2() {
+
+        count2 = (count2 + 1) % 5;
+        return count2;
+    }
+
+
+    /**
+     * Get the next inspection from the vehicle database.
      * @return Returns the name of an specific inspection.
      */
     public String getInspection() {
@@ -66,10 +78,11 @@ public class Inspection {
     }
 
     /**
-     * Unfinished code
+     * Save the result of an inspection to the vehicle database.
+     * @param result The result of an isnection that can either pass or fail.
      */
     public void saveResult(boolean result) {
-        inspections.get(counter()).setResult(result);
+        inspections.get(counter2()).setResult(result);
     }
 
 

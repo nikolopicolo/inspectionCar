@@ -45,9 +45,9 @@ public class Receipt {
         StringBuilder builder = new StringBuilder();
         Date inspectionTime = new Date();
 
-        builder.append("Car inspection");
+        builder.append("Car inspection ");
         builder.append(inspectionTime.toString());
-        builder.append(amountPaid.toString());
+        builder.append("\n\n\t\t The cost is: " + amountPaid.toString() + "\n");
 
         return builder.toString();
     }
